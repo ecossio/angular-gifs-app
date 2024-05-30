@@ -1,0 +1,12 @@
+.card {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px !important;
+  break-inside: avoid;
+}
+
+.card > shared-lazy-image {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
