@@ -1,9 +1,5 @@
 <div class="card mb-2 bg-dark text-center" >
-  <!-- [height]="gif.images.downsized_medium.height" [width]="gif.images.downsized_medium.width" [ngStyle]="{'height.px':gif.images.downsized_medium.width, 'width.px':gif.images.downsized_medium.width}" -->
-  <shared-lazy-image [url]="gif.images.downsized_medium.url" [alt]="gif.title" ></shared-lazy-image>
-  <!-- <div class="card-body text-white">
-    <p class="card-text">{{ gif.title || 'No title'}}</p>
-  </div> -->
-
+  <shared-lazy-image [url]="gif.images.downsized_medium.url" [alt]="gif.title" [height]="gif.images.downsized_medium.height" [width]="gif.images.downsized_medium.width"></shared-lazy-image>
   <footer class="m-2 text-white">{{ gif.title || 'No title'}}</footer>
+  <i class="animate__animated animate__fadeIn animate__faster fa-solid fa-link" title="Copiar enlace" (click)="copyLinkToClipboard(gif.images.downsized_medium.url)"></i>
 </div>

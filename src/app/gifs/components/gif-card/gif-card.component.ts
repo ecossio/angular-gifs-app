@@ -15,4 +15,8 @@ export class GifCardComponent implements OnInit {
       throw new Error('Gif property is required');
     }
   }
+
+  copyLinkToClipboard(url: string): void {
+    navigator.clipboard.writeText(url);
+  }
 }

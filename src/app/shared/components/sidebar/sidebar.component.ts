@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '../../../gifs/services/gifs.service';
+import { PaginationDTO } from '../../../gifs/interfaces/gifs.interface';
 
 @Component({
   selector: 'shared-sidebar',
@@ -14,6 +15,7 @@ export class SidebarComponent {
   }
 
   searchTag(tag: string): void {
-    this.gifsSvc.searchTag(tag);
+    const pagination: PaginationDTO = { limit: 50, offset: 0 };
+    this.gifsSvc.searchTag(tag, pagination);
   }
 }

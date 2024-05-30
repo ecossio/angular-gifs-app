@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, GifsModule, SharedModule],
+  imports: [AppRoutingModule, BrowserModule, GifsModule, SharedModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })

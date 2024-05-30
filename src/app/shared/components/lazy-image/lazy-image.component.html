@@ -1,4 +1,7 @@
-<div class="d-flex justify-content-center" [ngStyle]="{'height.px':height, 'width.px':width}">
-  <img [src]="url" class="card-img-top animate__animated animate__fadeIn" (load)="onLoad()" [ngStyle]="{display: hasLoaded ? '':'none'}" style="object-fit: cover;">
-  <img *ngIf="!hasLoaded" src="loader.svg" alt="loader" height="35" width="35">
+<div class="d-flex justify-content-center">
+  <img [src]="url" class="card-img-top animate__animated animate__fadeIn" (load)="onLoad()" [height]="height" [width]="width" [ngStyle]="{display: hasLoaded ? '':'none'}" style="object-fit: cover;">
+
+  <div *ngIf="!hasLoaded" class="d-flex justify-content-center align-items-center" [ngStyle]="{'height.px':height}">
+    <img src="loader.svg" alt="loader" height="35" width="35">
+  </div>
 </div>

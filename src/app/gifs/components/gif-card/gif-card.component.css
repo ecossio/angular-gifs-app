@@ -4,6 +4,21 @@
   grid-template-rows: 1fr auto;
   margin-bottom: 10px !important;
   break-inside: avoid;
+
+  i {
+    color: white;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+  }
+
+  &:hover {
+    i {
+      display: inline-block;
+    }
+  }
 }
 
 .card > shared-lazy-image {

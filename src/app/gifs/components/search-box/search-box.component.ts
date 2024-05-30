@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GifsService } from '../../services/gifs.service';
+import { PaginationDTO } from '../../interfaces/gifs.interface';
 
 @Component({
   selector: 'gifs-search-box',
@@ -23,7 +24,9 @@ export class SearchBoxComponent {
 
   searchTag() {
     const newTag = this.tagInput.nativeElement.value;
-    this.gifsSvc.searchTag(newTag);
+    const pagination: PaginationDTO = { limit: 50, offset: 0 };
+
+    this.gifsSvc.searchTag(newTag, pagination);
     this.tagInput.nativeElement.value = '';
   }
 }
