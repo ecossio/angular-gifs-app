@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 
+Aplicación para buscar gifs con la API de GIPHY
+
 # Demo
 
 [Ver demo](https://ecossio.github.io/angular-gifs-app)
